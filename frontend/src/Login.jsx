@@ -7,14 +7,18 @@ function Login() {
   const navigate = useNavigate();
 
   const login = async () => {
-    try {
-      const res = await API.post("/login", data);
-      localStorage.setItem("token", res.data.token);
-      navigate("/dashboard");
-    } catch (err) {
-      alert("Login failed");
-    }
-  };
+  try {
+    const res = await API.post("/login", data);
+
+    localStorage.setItem("token", res.data.token);
+
+    // 🔥 THIS IS IMPORTANT
+    navigate("/dashboard");
+
+  } catch (err) {
+    alert("Login failed");
+  }
+};
 
   return (
     <div style={{textAlign:"center", marginTop:"100px"}}>
