@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: "https://lost-found-item-management-system-5jls.onrender.com/api"
 });
 
 export default API;
